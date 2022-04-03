@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScottPlot;
 
 namespace PlottingData
 {
-    public partial class MainForm : Form
+    internal partial class StatisticsForm : Form
     {
-        public MainForm()
+        public StatisticsForm()
         {
             InitializeComponent();
         }
-
     }
 }

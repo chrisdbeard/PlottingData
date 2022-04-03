@@ -1,6 +1,6 @@
 ﻿namespace PlottingData
 {
-    partial class MainForm
+    internal partial class RawViewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flpRawViewForm = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // MainForm
+            // flpRawViewForm
+            // 
+            this.flpRawViewForm.AutoScroll = true;
+            this.flpRawViewForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpRawViewForm.Location = new System.Drawing.Point(0, 0);
+            this.flpRawViewForm.Name = "flpRawViewForm";
+            this.flpRawViewForm.Size = new System.Drawing.Size(800, 450);
+            this.flpRawViewForm.TabIndex = 0;
+            // 
+            // RawViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainForm";
-            this.Text = "Data Viewer";
+            this.Controls.Add(this.flpRawViewForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "RawViewForm";
+            this.Text = "RawViewForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flpRawViewForm;
     }
 }
-
