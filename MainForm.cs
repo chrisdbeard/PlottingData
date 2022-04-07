@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PlottingData
 {
-    public partial class MainForm : Form
+    internal partial class MainForm : Form
     {
         private DataViewerController dataViewerController { get; set; }
         private Form CurrentForm { get; set; }
@@ -58,7 +58,7 @@ namespace PlottingData
                 ImportForm frm = (ImportForm)this.CurrentForm;
                 dataViewerController.ReadDataSet(frm.FilePath);
             }
-            this.CurrentForm = new StatisticsForm();
+            this.CurrentForm = new StatisticsForm(dataViewerController.Data);
             LoadForm();
         }
 

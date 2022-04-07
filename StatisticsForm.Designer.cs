@@ -33,6 +33,7 @@
             // 
             // flpStatisticsForm
             // 
+            this.flpStatisticsForm.AutoScroll = true;
             this.flpStatisticsForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpStatisticsForm.Location = new System.Drawing.Point(0, 0);
             this.flpStatisticsForm.Name = "flpStatisticsForm";

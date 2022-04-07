@@ -18,6 +18,10 @@ namespace PlottingData
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructor that takes in a dataset and extracts each column of data and plots it.
+        /// </summary>
+        /// <param name="data"></param>
         public RawViewForm(DataSet data)
         {
             InitializeComponent();

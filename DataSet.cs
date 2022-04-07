@@ -82,5 +82,19 @@ namespace PlottingData
                 }
             }
         }
+
+        public Dictionary<string, double[]> ToDict()
+        {            
+            Dictionary<string, double[]> data = new Dictionary<string, double[]>();
+            data["Time"] = this.Data.Select(x => x.Time.ToOADate()).ToArray();
+            data["Altitude (ft.)"] = this.Data.Select(x => x.Altitude).ToArray();
+            data["Pitch (°)"] = this.Data.Select(x => x.Pitch).ToArray();
+            data["Bit Rate (Baud)"] = this.Data.Select(x => x.BitRate).ToArray();
+            data["Slant Range (ft.)"] = this.Data.Select(x => x.SlantRange).ToArray();
+            data["Distance To Target (ft.)"] = this.Data.Select(x => x.DistanceToTarget).ToArray();
+            data["Roll (°)"] = this.Data.Select(x => x.Roll).ToArray();
+            data["Pressure (mmHG)"] = this.Data.Select(x => x.Pressure).ToArray();
+            return data;
+        }
     }
 }

@@ -26,14 +26,54 @@ namespace PlottingData
         {
             this.Raw = line;
             List<string> splitLine = line.Split(',').ToList();
-            this.Time = DateTime.Parse(splitLine[0]);
-            this.Pressure = double.Parse(splitLine[1]);
-            this.Altitude = double.Parse(splitLine[2]);
-            this.BitRate = double.Parse(splitLine[3]);
-            this.Pitch = double.Parse(splitLine[4]);
-            this.SlantRange = double.Parse(splitLine[5]);
-            this.DistanceToTarget = double.Parse(splitLine[6]);
-            this.Roll = double.Parse(splitLine[7]);
+            DateTime time;
+            bool res = DateTime.TryParse(splitLine[0], out time);
+            if (res)
+            {
+                this.Time = time;
+            }            
+            double pressure;
+            res = Double.TryParse(splitLine[1], out pressure);
+            if (res)
+            {
+                this.Pressure = pressure;
+            }
+            double altitude;
+            res = Double.TryParse(splitLine[2], out altitude);
+            if (res)
+            {
+                this.Altitude = altitude;
+            }
+            double bitRate;            
+            res = Double.TryParse(splitLine[3], out bitRate);
+            if (res)
+            {
+                this.BitRate = bitRate;
+            }
+            double pitch;
+            res = Double.TryParse(splitLine[4], out pitch);
+            if (res)
+            {
+                this.Pitch = pitch;
+            }
+            double slantRange;
+            res = Double.TryParse(splitLine[5], out slantRange);
+            if (res)
+            {
+                this.SlantRange = slantRange;
+            }
+            double distanceToTarget;
+            res = Double.TryParse(splitLine[6], out distanceToTarget);
+            if (res)
+            {
+                this.DistanceToTarget = distanceToTarget;
+            }
+            double roll;
+            res = Double.TryParse(splitLine[7], out roll);
+            if (res)
+            {
+                this.Roll = roll;
+            }
         }
 
         /// <summary>
