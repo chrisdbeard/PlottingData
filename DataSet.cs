@@ -83,6 +83,10 @@ namespace PlottingData
             }
         }
 
+        /// <summary>
+        /// Sets all properties to a dictionary.
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, double[]> ToDict()
         {            
             Dictionary<string, double[]> data = new Dictionary<string, double[]>();

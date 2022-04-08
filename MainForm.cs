@@ -24,6 +24,9 @@ namespace PlottingData
             LoadForm();
         }
 
+        /// <summary>
+        /// Refreshes the MainForm.
+        /// </summary>
         private void LoadForm()
         {
             CurrentForm.TopLevel = false;
@@ -34,12 +37,22 @@ namespace PlottingData
             CurrentForm.Show();
         }
 
+        /// <summary>
+        /// Populates the parent forms panel with the ImportForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImport_Click(object sender, EventArgs e)
         {
             this.CurrentForm = new ImportForm();
             LoadForm();
         }
 
+        /// <summary>
+        /// Populates the parent forms panel with the RawViewForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRawView_Click(object sender, EventArgs e)
         {
             if (this.CurrentForm is ImportForm)
@@ -51,6 +64,11 @@ namespace PlottingData
             LoadForm();
         }
 
+        /// <summary>
+        /// Populates the parent forms panel with the StatisticForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStatistics_Click(object sender, EventArgs e)
         {
             if (this.CurrentForm is ImportForm)
@@ -62,6 +80,7 @@ namespace PlottingData
             LoadForm();
         }
 
+        // TODO
         private void btnSettings_Click(object sender, EventArgs e)
         {
 
