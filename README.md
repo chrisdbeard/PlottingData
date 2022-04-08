@@ -4,6 +4,9 @@
 # Class Diagram
 ![plotDataClassDiagram](https://user-images.githubusercontent.com/88802276/161437888-63e1ab21-c487-4337-931d-b27097b39b90.png)
 
+# Important
+A data file to use the application has been added to the Resource folder so you can try the application.
+
 # Screenshots
 Below shows the application at launch.
 ![PlottingData_MainScreen](https://user-images.githubusercontent.com/88802276/162501163-fdd4314e-ead6-46da-be9e-0ff7d15ceeee.png)
