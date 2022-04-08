@@ -84,7 +84,8 @@ namespace PlottingData
         }
 
         /// <summary>
-        /// Sets all properties to a dictionary.
+        /// Returns a dictionary that represents the DataSet. Keys of the dictionary are the 
+        /// same as the feature names.
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, double[]> ToDict()

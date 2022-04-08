@@ -33,17 +33,19 @@ namespace PlottingData
             int widthOfPlot = 600;
             Dictionary<string, double[]> dictData = data.ToDict();
             double[] dictValues;
-            double[] dataX;
-            List<string> keys = new List<string>();
+            double[] dataX = dictData["Time"];
             
             // Creates a scatterplot for each element in the dictionary dictData.
             // Adds each plot to the flowlayoutpanel.
             foreach (string key in dictData.Keys)
             {
+                // Don't want a plot of time vs time.
+                if (key == "Time")
+                {
+                    continue;
+                }
+
                 FormsPlot plot = new FormsPlot();
-                dataX = dictData["Time"];
-                //dictData.Remove(dictData.Keys.First());
-                keys.Add(key);
                 dictValues = dictData[key];
                 // Continues if data is null or empty.
                 if (dictValues == null || dictValues.Length == 0)
@@ -63,9 +65,9 @@ namespace PlottingData
             
                 // Sets labels of the plot.
                 plot.Plot.XAxis.DateTimeFormat(true);
-                plot.Plot.XLabel($"{keys[0]}");
+                plot.Plot.XLabel("Time");
                 plot.Plot.YLabel($"{key}");
-                plot.Plot.Title($"{key} vs {keys[0]}");
+                plot.Plot.Title($"{key} vs Time");
                 plot.Refresh();
                 flpRawViewForm.Controls.Add(plot);
             }

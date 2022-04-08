@@ -83,7 +83,7 @@ namespace PlottingData
         // TODO
         private void btnSettings_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Feature not implemented.");
         }
     }
 }

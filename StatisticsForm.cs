@@ -48,7 +48,7 @@ namespace PlottingData
                     continue;
                 }
                 double binSize = (dictValues.Max() - dictValues.Min()) / 10;
-                // Continues if binSize is 0.
+                // Cannot make a histogram if max and min are the same.
                 if (binSize == 0)
                 {
                     continue;
