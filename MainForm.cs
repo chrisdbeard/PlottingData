@@ -19,7 +19,6 @@ namespace PlottingData
         {
             InitializeComponent();
             this.dataViewerController = new DataViewerController();
-
             this.CurrentForm = new ImportForm();
             LoadForm();
         }
